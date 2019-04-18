@@ -8,7 +8,7 @@ from rest_framework.test import APIClient
 from rest_framework import status
 
 pytestmark = pytest.mark.django_db
-TOKEN_URL = reverse('core:token')
+TOKEN_URL = reverse('core:create_token')
 
 
 class PublicApiTests(TestCase):

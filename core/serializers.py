@@ -27,3 +27,14 @@ class AuthTokenSerializer(serializers.Serializer):
 
         attrs['user'] = user
         return attrs
+
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = get_user_model()
+        fields = ('email', 'password', 'name')
+        extra_kwargs = {'password': {'write_only': True, 'min_length': 5}}
+
+    def create(self, validated_data):
+        """creates a new user with encrypted password and returns it"""
+        return get_user_model().objects.create_user(**validated_data)

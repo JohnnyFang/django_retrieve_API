@@ -5,5 +5,6 @@ from core import views
 app_name = 'core'
 
 urlpatterns = [
-    path('token/', views.CreateTokenView.as_view(), name='token')
+    path('create/user/', views.CreateUserView.as_view(), name='create_user'),
+    path('create/token/', views.CreateTokenView.as_view(), name='crete_token')
 ]
