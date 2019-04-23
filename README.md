@@ -22,14 +22,28 @@ API endpoints
 POST ```api/core/user/  ```   
 fields(keys): *name, email, password*  
 
+```shell
+curl --data "name=John&email=JohnSnow@got.co&password=IKnowNothing" http://127.0.0.1:8000/api/core/user/
+
+```
+
 **Create a new auth token for user**   
 POST ```/api/core/token/```  
 fields(keys): *email,password*  
+
+```shell
+curl --data "email=JohnSnow@got.co&password=IKnowNothing" http://127.0.0.1:8000/api/core/token/
+
+```
 
 **Retrieve user reviews**
 GET ```/api/reviews/```   
 Authorization (header)
 
+```shell
+curl -H "Authorization: Token de440216cc90a6d68498938923c0594093f0242c" http://127.0.0.1:8000/api/reviews/
+
+```
 example  
 ```Authorization  Token de440216cc90a6d68400038923c0594093f0242c   ```
 
@@ -38,6 +52,10 @@ POST ```/api/reviews/```
 fields: *title, rating, company, summary*  
 Authorization (header)
 
+```shell
+ curl -H "Authorization: Token b56fb64cec2287a8e27214c1b6f6a1281b227a83" --data "title=TLJ review&rating=1&company=My Own&summary=Garbage!" http://127.0.0.1:8000/api/reviews/
+
+```
 Other
 ===
 **Running Tests**  
