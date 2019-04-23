@@ -19,11 +19,11 @@ python manage.py runserver 8080
 API endpoints
 =============
 **Create new user**  
-POST ```api/core/create/user/  ```   
+POST ```api/core/user/  ```   
 fields(keys): *name, email, password*  
 
 **Create a new auth token for user**   
-POST ```/api/core/create/token/```  
+POST ```/api/core/token/```  
 fields(keys): *email,password*  
 
 **Retrieve user reviews**
