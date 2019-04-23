@@ -14,7 +14,7 @@ from the command line, type (make sure your virtual environment is activated)
 git clone https://github.com/JohnnyFang/django_retrieve_API
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py
+python manage.py runserver 8080
 ```
 API endpoints
 =============
@@ -23,7 +23,7 @@ POST ```api/core/create/user/  ```
 fields(keys): *name, email, password*  
 
 **Create a new auth token for user**   
-GET ```/api/core/create/token/```  
+POST ```/api/core/create/token/```  
 fields(keys): *email,password*  
 
 **Retrieve user reviews**
