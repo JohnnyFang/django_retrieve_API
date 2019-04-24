@@ -3,7 +3,7 @@ Django Review App
 **A Django simple restful API to submit/retrieve reviews**   
 
 
-Setup
+App Setup
 =====
 Python 3 is mandatory!  
 First create a virtual environment  and call it something like *retr-venv*   
@@ -14,8 +14,27 @@ from the command line, type (make sure your virtual environment is activated)
 git clone https://github.com/JohnnyFang/django_retrieve_API
 pip install -r requirements.txt
 python manage.py migrate
+```
+   
+Data Setup
+====
+After running the commands in the previous section, type:   
+   
+```
+python populate.py
+```
+   
+populate will create:  
+* 3 users (1 admin, 2 regular users)  
+* 2 reviews for each regular users   
+
+Running the App local
+====
+```
+
 python manage.py runserver 8080
 ```
+
 API endpoints
 =============
 **Create new user**  
