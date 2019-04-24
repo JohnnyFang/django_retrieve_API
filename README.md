@@ -26,6 +26,9 @@ python populate.py
    
 populate will create:  
 * 3 users (1 admin, 2 regular users)  
+  * Admin: email=admin@user.com, password=Test12345
+  * email=one@user.com, password=random123
+  * email=two@user.com, password=pass123
 * 2 reviews for each regular users   
 
 Running the App local
